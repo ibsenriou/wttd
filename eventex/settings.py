@@ -21,6 +21,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 
+DEFAULT_FROM_EMAIL = 'ibsenriou@hotmail.com'
+
 
 # Application definition
 
@@ -31,6 +33,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_extensions',
 
     'eventex.core',
     'eventex.subscriptions'
